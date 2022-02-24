@@ -1,9 +1,8 @@
-#include <iostream>
+#include<stdio.h>
 
-using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cout << "Hi" ;
+    printf("Hello Codelearn");
     return 0;
 }
