@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 
-using std::string;
 
 #pragma comment(lib,"ws2_32.lib")
 
