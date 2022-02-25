@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
 	}
 
     FILE *fp;
-
+    fp = fopen("program.txt","w");
        
 	fd = socket_connect(argv[1], 80); 
 	write(fd, "GET /\r\n", strlen("GET /\r\n")); // write(fd, char[]*, len);  
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 		bzero(buffer, BUFFER_SIZE);
 	}
 
-
+    fclose(fp);
 	shutdown(fd, SHUT_RDWR); 
 	close(fd); 
 
