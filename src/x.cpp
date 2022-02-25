@@ -1,6 +1,6 @@
 #include <string.h>
 #include <winsock2.h>
-#include <windows.h>
+#include <sys/socket.h>
 #include <iostream>
 #include <vector>
 #include <locale>
