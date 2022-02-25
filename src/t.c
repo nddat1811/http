@@ -1,16 +1,9 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <sys/socket.h>
 
 
-#ifdef _WIN32
-    #include <windows.h>
-	#include <winsock2.h>
-	#include <ws2tcpip.h>
-	#include <stdio.h>
-	#pragma comment(lib, "Ws2_32.lib")
-#elif _LINUX
-	#include <sys/socket.h>
 
 
 HINSTANCE hInst;
