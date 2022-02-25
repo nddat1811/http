@@ -43,20 +43,26 @@ int socket_connect(char *host, in_port_t port){
 int main(int argc, char *argv[]){
 	int fd;
 	char buffer[BUFFER_SIZE];
+    char buff[255];
 
 	if(argc < 3){
 		fprintf(stderr, "Usage: %s <hostname> <port>\n", argv[0]);
 		exit(1); 
 	}
+
+    FILE *fp;
+
        
-	fd = socket_connect(argv[1], atoi(argv[2])); 
+	fd = socket_connect(argv[1], 80); 
 	write(fd, "GET /\r\n", strlen("GET /\r\n")); // write(fd, char[]*, len);  
 	bzero(buffer, BUFFER_SIZE);
 	
 	while(read(fd, buffer, BUFFER_SIZE - 1) != 0){
 		fprintf(stderr, "%s\n", buffer);
+        fprintf(fp,"%s\n",buffer);
 		bzero(buffer, BUFFER_SIZE);
 	}
+
 
 	shutdown(fd, SHUT_RDWR); 
 	close(fd); 
