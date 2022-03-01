@@ -837,7 +837,7 @@ namespace http
     {
     public:
         explicit Request(const std::string& url,
-                         const InternetProtocol protocol = InternetProtocol::V4):
+                         const InternetProtocol protocol = InternetProtocol::V6):
             internetProtocol{protocol},
             uri{parseUri(url.begin(), url.end())}
         {
