@@ -10,7 +10,7 @@ int main(int argc, const char* argv[])
         std::string method = "GET";
         std::string arguments;
         std::string output;
-        auto protocol = http::InternetProtocol::V6;
+        auto protocol = http::InternetProtocol::V4;
         output = "o.txt";
 
     
