@@ -11,10 +11,10 @@ int main(int argc, const char* argv[])
         std::string arguments;
         std::string output;
         auto protocol = http::InternetProtocol::V4;
-        output = "o2.txt";
+        output = "o3.txt";
 
     
-        http::Request request{"http://anglesharp.azurewebsites.net/Chunked"};
+        http::Request request{"http://jigsaw.w3.org/HTTP/ChunkedScript"};
 
         // send a get request
         const auto response = request.send("GET");

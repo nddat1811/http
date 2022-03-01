@@ -11,7 +11,7 @@ int main(int argc, const char* argv[])
         std::string arguments;
         std::string output;
         auto protocol = http::InternetProtocol::V4;
-        output = "o.txt";
+        output = "o1.txt";
 
     
         http::Request request{"http://anglesharp.azurewebsites.net/Chunked"};
