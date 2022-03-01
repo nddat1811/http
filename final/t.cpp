@@ -19,7 +19,12 @@ int main(int argc, const char* argv[])
         // send a get request
         const auto response = request.send("GET");
         // std::cout << std::string{response.headers.begin(), response.headers.end()} << '\n';
-        std::cout << std::string{response.body.begin(), response.body.end()} << '\n'; // print the result
+        //std::cout << std::string{response.body.begin(), response.body.end()} << '\n'; // print the result
+        for(int i = 0; i < response.headers.size(); i++)
+        {
+           std::cout << response.headers[i].first << ", " << response.headers[i].second << '\n';
+        }
+        
         std::cout << "j:" << response.status.reason << '\n';
 
         if (response.status.code == http::Status::Ok)
