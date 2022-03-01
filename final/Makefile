@@ -1,1 +1,2 @@
-g++ -o program HTTPRequest.hpp t.cpp
+final:
+	g++ -o program HTTPRequest.hpp t.cpp
