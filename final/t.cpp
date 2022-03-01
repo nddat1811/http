@@ -18,11 +18,9 @@ int main(int argc, const char* argv[])
 
         // send a get request
         const auto response = request.send("GET");
-
-        std::cout << "hi\n";
-        std::cout << std::string{response.body.begin(), response.body.end()} << '\n'; // print the result
-        std::cout << "hi333333333\n";
-        std::cout << response.status.reason << '\n';
+        std::cout << std::string{response.headers.begin(), response.headers.end()} << '\n';
+        // std::cout << std::string{response.body.begin(), response.body.end()} << '\n'; // print the result
+        std::cout << "j:" << response.status.reason << '\n';
 
         if (response.status.code == http::Status::Ok)
         {
