@@ -16,6 +16,6 @@ int main( int argc, char *argv[] )
     }
     else
     {
-      printf("Ban nen cung cap mot tham so.\n");
+      cout << "Ban nen cung cap mot tham so" << endl;
     }
 }
