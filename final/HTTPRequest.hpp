@@ -850,7 +850,6 @@ namespace http
         {
             return send(method,
                         std::vector<uint8_t>(body.begin(), body.end()),
-                        //std::vector<uint8_t>(headers.begin(), headers.end()),
                         headers,
                         timeout);
         }
