@@ -545,6 +545,9 @@ namespace http
         template <class Iterator>
         Uri parseUri(const Iterator begin, const Iterator end)
         {
+            std::cout << "begin : " << begin << '\n';
+            std::cout << "end : " << end << '\n';
+            
             std::string schemeEnd = "://";
 
             const auto schemeEndIterator = std::search(begin, end, schemeEnd.begin(), schemeEnd.end());
